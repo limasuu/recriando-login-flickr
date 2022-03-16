@@ -1,0 +1,40 @@
+:root{
+    --branco: white;
+    --cinza: #a29d9d;    
+    --azul-claro: #33b7ef;
+    --azul-forte: #128fdc;
+    --preto: #212124;
+    --rosa-logo: #ff0084;
+    --azul-logo: #005fde;
+}
+
+*{
+    padding: 0;
+    margin: 0;    
+    text-decoration: none;
+}
+
+body{
+    display: grid;
+    grid-template: "header" "main" "footer";
+
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 10% auto 15%;
+}
+/* ---------------------------------- */
+header{
+    background-color: var(--preto);
+    grid-area: header;
+
+}
+
+main{
+    background-color: var(--branco);
+    grid-area: main;
+}
+
+footer{
+    background-color: var(--rosa-logo);
+    grid-area: footer;
+}
