@@ -1,40 +1,50 @@
 :root{
-    --branco: white;
-    --cinza: #a29d9d;    
-    --azul-claro: #33b7ef;
-    --azul-forte: #128fdc;
-    --preto: #212124;
-    --rosa-logo: #ff0084;
+    --branco: #ffffff;
+    --preto: #242424;
+    --cinza: #929292;   
+    --azul-claro: #b3d4fc;
+    --azul-padrao: #128fdc;
     --azul-logo: #005fde;
+    --rosa-logo: #ff0084;  
+    --vermelho: #ff0000;  
 }
 
-*{
+::selection{
+    background-color: var(--azul-claro);
+}
+
+*{     
     padding: 0;
-    margin: 0;    
+    margin: 0;       
+    box-sizing: border-box;    
+
     text-decoration: none;
+    text-align: center;    
+    color: var(--preto);
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: normal;
 }
 
-body{
+.principal{
     display: grid;
     grid-template: "header" "main" "footer";
 
     width: 100vw;
     height: 100vh;
-    grid-template-rows: 10% auto 15%;
+    grid-template-rows: 11% auto 15%;
 }
 /* ---------------------------------- */
 header{
-    background-color: var(--preto);
     grid-area: header;
-
+    background-color: var(--preto);  
 }
 
 main{
-    background-color: var(--branco);
     grid-area: main;
+    background-color: var(--branco); 
 }
 
-footer{
-    background-color: var(--rosa-logo);
+footer{   
     grid-area: footer;
 }
