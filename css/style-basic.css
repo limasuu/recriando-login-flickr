@@ -37,9 +37,18 @@
 /* ---------------------------------- */
 header{
     grid-area: header;
-    background-color: var(--preto);  
+    background-color: var(--preto);    
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
 }
 
+header img{
+    width: 100px;
+}
+/* ---------------------------------- */
 main{
     grid-area: main;
     background-color: var(--branco); 
