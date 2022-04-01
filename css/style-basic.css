@@ -52,8 +52,20 @@ header img{
 main{
     grid-area: main;
     background-color: var(--branco); 
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;  
 }
 
+
+main h1{
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
 footer{   
     grid-area: footer;
 }
