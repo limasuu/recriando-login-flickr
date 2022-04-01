@@ -61,6 +61,27 @@ main{
     align-items: center;  
 }
 
+.logo{
+    width: 22px;
+    height: 10px;
+    display: grid;
+    grid-template: "azul rosa";
+    grid-gap: 2px;
+}
+
+.logo span{    
+    border-radius: 100%;
+}
+
+.circ-azul{    
+    grid-area: azul;
+    background-color: var(--azul-logo);    
+}
+
+.circ-rosa{    
+    grid-area: rosa;
+    background-color: var(--rosa-logo);    
+}
 
 main h1{
     margin: 20px 0;
