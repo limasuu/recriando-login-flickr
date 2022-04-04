@@ -70,11 +70,17 @@ main{
     background-color: var(--branco); 
 
     padding: 30px 20px;
+}
 
+main, form{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;  
+}
+
+form{
+    width: 100%;
 }
 /* ----------------- */
 .logo{
