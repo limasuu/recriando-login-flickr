@@ -4,6 +4,10 @@ const descEmailLabel= document.querySelector("#descricao-email");
 const proximaButton= document.querySelector("#botao-proxima");
 const msgLoginLabel= document.querySelector("#msg-login");
 
+const alertaDiv=document.querySelector("#alerta");
+const areaPrincipalDiv= document.querySelector("#principal");
+const tentarNovamButton= document.querySelector("#botao-tentar");
+const continueYahooButton= document.querySelector("#botao-continue-yahoo");
 
 
 window.onload= () => {
@@ -34,6 +38,7 @@ emailInput.addEventListener('focusout', () => {
     }
 });
 
+
 // --------------------------------------------------------
 
 proximaButton.addEventListener('click', (e) => {
@@ -51,10 +56,24 @@ proximaButton.addEventListener('click', (e) => {
         return;
     }else{
 
-       
+        var i= valorEmail.indexOf('@');
+        var controle= false;
+
+        if(i != -1){
+            var finalEmail= valorEmail.substring(i);
+
+            if(finalEmail.includes('.'))
+                controle= true;            
+        }
+
+        if(!controle){    
+            alertaDiv.classList.remove("oculto");
+            areaPrincipalDiv.classList.add("segundo-plano");
+
+            return;
+        } 
         
     }
-    
-    
+   
 });
 

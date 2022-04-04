@@ -45,6 +45,13 @@ a{
     color: var(--azul-padrao);
 }
 
+.oculto{
+    display: none;
+}
+
+.segundo-plano{
+    filter: opacity(35%);
+}
 /* ---------------------------------- */
 header{
     grid-area: header;
@@ -70,6 +77,8 @@ main{
     background-color: var(--branco); 
 
     padding: 30px 20px;
+
+    position: relative;
 }
 
 main, form{
@@ -198,7 +207,73 @@ main h1{
     opacity: 0.9;
     cursor: pointer;
 }
+/* ----------------- */
+.alerta{
+    position: absolute;
+    
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
 
+.alerta > div{
+    height: 64vh;
+
+    background-color: var(--branco);
+    margin: 18vh 2.5vw;
+    padding: 5vh 5vw;
+    box-shadow: 0.05rem 0.1rem 0.7rem var(--cinza-padrao);
+    border-radius: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alerta div h1{
+    font-size: 1.09rem;
+}
+
+.alerta div p{
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.alerta div h1, .alerta div p{
+    width: 100%;
+    text-align: start;
+}
+
+.botoes-alerta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes-alerta button{ 
+    width: 48%;
+    padding: 0.5rem 1rem;
+
+    font-size: 0.9rem;
+    color: var(--branco);
+    border: 0;
+    border-radius: 0.3rem;
+}
+
+.botoes-alerta button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.botoes-alerta button:first-child{
+    background-color: var(--cinza-padrao);
+}
+
+.botoes-alerta button:last-child{
+    background-color: var(--azul-padrao);
+}
+
+/* ---------------------------------- */
 footer{   
     grid-area: footer;
 }
