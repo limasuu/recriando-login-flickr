@@ -1,7 +1,8 @@
 :root{
     --branco: #ffffff;
     --preto: #242424;
-    --cinza: #929292;   
+    --cinza-padrao: #929292;   
+    --cinza-claro: #e9e9e9;   
     --azul-claro: #b3d4fc;
     --azul-padrao: #128fdc;
     --azul-logo: #005fde;
@@ -34,6 +35,16 @@
     height: 100vh;
     grid-template-rows: 11% auto 15%;
 }
+
+/* ----------------- */
+p, a, label{
+    font-size: 0.8rem;
+}
+
+a{
+    color: var(--azul-padrao);
+}
+
 /* ---------------------------------- */
 header{
     grid-area: header;
@@ -43,6 +54,11 @@ header{
     justify-content: start;
     align-items: center;
     padding: 15px;
+
+    width: 100%; 
+    position: fixed;
+    top: 0;     
+    z-index: 1;
 }
 
 header img{
@@ -60,7 +76,7 @@ main{
     justify-content: start;
     align-items: center;  
 }
-
+/* ----------------- */
 .logo{
     width: 22px;
     height: 10px;
@@ -87,6 +103,7 @@ main h1{
     margin: 20px 0;
     font-size: 1.1rem;
 }
+
 footer{   
     grid-area: footer;
 }
