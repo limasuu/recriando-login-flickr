@@ -77,3 +77,13 @@ proximaButton.addEventListener('click', (e) => {
    
 });
 
+// --------------------------------------------------------
+
+tentarNovamButton.addEventListener('click', () => {
+    alertaDiv.classList.add("oculto");
+    areaPrincipalDiv.classList.remove("segundo-plano");
+});
+
+continueYahooButton.addEventListener('click', () => {   
+    window.location.replace("https://login.yahoo.com/");
+});
