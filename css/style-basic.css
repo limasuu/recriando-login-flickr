@@ -153,6 +153,33 @@ main h1{
     font-size: 0.7rem;
 }
 /* ----------------- */
+.msg-login{
+    font-size: 0.7rem;
+    margin-top: 10px;
+    padding-left: 15px;
+    
+    text-align: start;
+    width: 100%;
+}
+
+.obrigatorio, .campo-obrigatorio:focus ~ .obrigatorio{    
+    color:var(--vermelho);
+}
+
+.campo-obrigatorio, .campo-obrigatorio:focus{
+    border-color: var(--vermelho);
+}
+
+.embranco{
+    animation: animacao-alerta 0.2s 2;
+}
+
+@keyframes animacao-alerta{
+    0% {left: 15px;}
+    50% {left: 30px;}
+    100% {left: 15px;}
+}
+/* ----------------- */
 .botao{
     width: 100%;    
     border-width: 0;

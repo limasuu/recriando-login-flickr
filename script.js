@@ -1,6 +1,10 @@
 const emailInput= document.querySelector("#email");
 const descEmailLabel= document.querySelector("#descricao-email");
 
+const proximaButton= document.querySelector("#botao-proxima");
+const msgLoginLabel= document.querySelector("#msg-login");
+
+
 
 window.onload= () => {
     emailInput.value= "";
@@ -20,7 +24,37 @@ emailInput.addEventListener('focusout', () => {
         descEmailLabel.classList.remove("descricao-login-menor");
     
     }else{        
+        if(emailInput.classList.contains("campo-obrigatorio")){
+            
+            emailInput.classList.remove("campo-obrigatorio");
+            descEmailLabel.classList.remove("obrigatorio");
+            msgLoginLabel.classList.remove("obrigatorio");
+            msgLoginLabel.textContent= "";
+        }
+    }
+});
+
+// --------------------------------------------------------
+
+proximaButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const valorEmail= emailInput.value;
+
+    if(valorEmail === ""){
+        emailInput.classList.add("campo-obrigatorio");
+        descEmailLabel.classList.add("obrigatorio");
+        descEmailLabel.classList.add("embranco");
+        msgLoginLabel.classList.add("obrigatorio");
+        msgLoginLabel.textContent= "Obrigatório";
+
+        return;
+    }else{
+
+       
         
     }
+    
+    
 });
 
