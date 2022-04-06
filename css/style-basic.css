@@ -7,7 +7,7 @@
     --azul-padrao: #128fdc;
     --azul-logo: #005fde;
     --rosa-logo: #ff0084;  
-    --vermelho: #ff0000;  
+    --vermelho: #ff0000; 
 }
 
 ::selection{
@@ -172,14 +172,14 @@ main h1{
 }
 
 .obrigatorio, .campo-obrigatorio:focus ~ .obrigatorio{    
-    color:var(--vermelho);
+    color: var(--vermelho);
 }
 
 .campo-obrigatorio, .campo-obrigatorio:focus{
     border-color: var(--vermelho);
 }
 
-.embranco{
+.em-branco{
     animation: animacao-alerta 0.2s 2;
 }
 
@@ -272,8 +272,24 @@ main h1{
 .botoes-alerta button:last-child{
     background-color: var(--azul-padrao);
 }
-
 /* ---------------------------------- */
 footer{   
     grid-area: footer;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+select, option{
+    font-size: 0.9rem;
+}
+/* ----------------- */
+select{
+    background-color: var(--transparent);
+    border-width: 0;
+    width: 100px;
+
+    cursor: pointer;
 }
