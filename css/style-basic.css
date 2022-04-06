@@ -282,7 +282,7 @@ footer{
     padding: 20px;
 }
 
-select, option{
+select, option, footer a{
     font-size: 0.9rem;
 }
 /* ----------------- */
@@ -292,4 +292,13 @@ select{
     width: 100px;
 
     cursor: pointer;
+}
+/* ----------------- */
+.links{ 
+    display: flex;
+}
+
+.links a{
+    margin: 0 5px;
+    color: var(--preto);
 }
