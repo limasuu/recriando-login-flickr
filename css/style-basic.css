@@ -7,7 +7,7 @@
     --azul-padrao: #128fdc;
     --azul-logo: #005fde;
     --rosa-logo: #ff0084;  
-    --vermelho: #ff0000; 
+    --vermelho: #ff0000;  
 }
 
 ::selection{
@@ -212,7 +212,22 @@ main h1{
     opacity: 0.9;
     cursor: pointer;
 }
+/* ----------------- */
+.olhar-senha{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: var(--cinza-padrao);
+    cursor: pointer;
+}
 
+.e-login:focus ~ .olhar-senha{
+    color: var(--azul-padrao);
+}
+
+.campo-obrigatorio + .olhar-senha, .campo-obrigatorio:focus + .olhar-senha{
+    color: var(--vermelho);
+}
 /* ----------------- */
 .alerta{
     position: absolute;

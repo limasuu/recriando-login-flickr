@@ -123,7 +123,18 @@ senhaInput.addEventListener('focusout', () => {
     }
 });
 
+olharSenhaButton.addEventListener('click', () => {
 
+    olharSenhaButton.classList.toggle('fa-eye');
+    olharSenhaButton.classList.toggle('fa-eye-slash');
+
+    if(senhaInput.getAttribute('type') === 'password')
+        senhaInput.setAttribute('type', 'text');
+    else
+        senhaInput.setAttribute('type', 'password');
+
+    senhaInput.focus();
+});
 
 // --------------------------------------------------------
 
