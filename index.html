@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <title>Flickr Login</title>
+        <script src="https://kit.fontawesome.com/15ee9f35ec.js" crossorigin="anonymous"></script> 
         
         <link rel="icon" type="img/png" href="img/flickr_icon.png"/>
         <link rel="stylesheet" type="text/css" href="css/style-basic.css"/>
@@ -20,47 +21,61 @@
                 </a>
             </header>
             <main>
-                <div class="logo">
-                    <span class="circ-azul"></span>
-                    <span class="circ-rosa"></span>
-                </div>
-                <h1>Entre no Flickr</h1>
-    
-                <form>
-                    <div class="login">
-                        <input type="text" id="email" class="e-login"/>
-                        <label for="email" id="descricao-email" class="descricao-login">Endereço de e-mail</label>                    
-                    </div>    
-                      
-                    <label id="msg-login" class="msg-login"></label>
-    
-                    <input type="submit" value="Próxima" class="botao" id="botao-proxima"/>
-                    
-                </form>
-               
+                
+                    <div class="logo">
+                        <span class="circ-azul"></span>
+                        <span class="circ-rosa"></span>
+                    </div>
+                    <h1>Entre no Flickr</h1>
+        
+                    <form>
+                        <div class="login">
+                            <input type="text" id="email" class="e-login"/>
+                            <label for="email" id="descricao-email" class="descricao-login">Endereço de e-mail</label>                    
+                        </div>    
+                        <div class="login oculto" id="campo-senha">
+                            <input type="password" id="senha" class="e-login"/>
+                            <label for="senha" id="descricao-senha" class="descricao-login">Senha</label>                    
+                            
+                        </div>  
+                        <label id="msg-login" class="msg-login"></label>
+        
+                        <input type="submit" value="Próxima" class="botao" id="botao-proxima"/>
+                        <div id="conclui-login" class="oculto">
+                            <div>
+                                <input type="checkbox" id="lembrar-email" checked autocomplete="off"/>
+                                <label for="lembrar-email">Lembre-se de endereço de email</label>
+                            </div>
+                            <input type="submit" value="Fazer login" class="botao" id="botao-login"/>
+                            <a href="#">Esqueceu a senha?</a>                       
+                        </div>
+                    </form>
+        
+                                   
             </main>
             <footer>
-                <select id="idioma">
-                    <option value="ingles">English</option>
-                    <option value="alemao">Deutsch</option>
-                    <option value="chines">中文</option>
-                    <option value="espanhol">Español</option>
-                    <option value="frances">Français</option>
-                    <option value="coreano">한국</option>
-                    <option value="Italiano">Italiano</option>
-                    <option value="portugues" selected>Português</option>
-                    <option value=vietnamita">Tiếng Việt</option>
-                    <option value="indonesio">Bahasa Indonesia</option>
-                </select>
-    
-                <div class="links">
-                    <a href="#">Ajuda</a>
-                    <a href="#">Privacidade</a>
-                    <a href="#">Termos</a>
-                </div>              
+                    <select id="idioma">
+                        <option value="ingles">English</option>
+                        <option value="alemao">Deutsch</option>
+                        <option value="chines">中文</option>
+                        <option value="espanhol">Español</option>
+                        <option value="frances">Français</option>
+                        <option value="coreano">한국</option>
+                        <option value="Italiano">Italiano</option>
+                        <option value="portugues" selected>Português</option>
+                        <option value=vietnamita">Tiếng Việt</option>
+                        <option value="indonesio">Bahasa Indonesia</option>
+                    </select>
+        
+                    <div class="links">
+                        <a href="#">Ajuda</a>
+                        <a href="#">Privacidade</a>
+                        <a href="#">Termos</a>
+                    </div>                        
             </footer>
         </div>
 
+        
         <div id="alerta" class="alerta oculto">
             <div>
                 <h1>Isto não é um endereço de e-mail</h1>

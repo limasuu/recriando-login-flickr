@@ -1,6 +1,10 @@
 const emailInput= document.querySelector("#email");
 const descEmailLabel= document.querySelector("#descricao-email");
 
+const senhaInput= document.querySelector("#senha");
+const descSenhaLabel= document.querySelector("#descricao-senha");
+const olharSenhaButton= document.querySelector("#olhar-senha");
+
 const proximaButton= document.querySelector("#botao-proxima");
 const msgLoginLabel= document.querySelector("#msg-login");
 
@@ -12,9 +16,11 @@ const continueYahooButton= document.querySelector("#botao-continue-yahoo");
 
 window.onload= () => {
     emailInput.value= "";
+    senhaInput.value= "";    
 };
 
 // --------------------------------------------------------
+
 
 emailInput.addEventListener('focusin', () => {
     descEmailLabel.classList.add("descricao-login-menor");
@@ -26,18 +32,12 @@ emailInput.addEventListener('focusout', () => {
 
     if(valorEmail === ""){
         descEmailLabel.classList.remove("descricao-login-menor");
-    
+
     }else{        
-        if(emailInput.classList.contains("campo-obrigatorio")){
-            
-            emailInput.classList.remove("campo-obrigatorio");
-            descEmailLabel.classList.remove("obrigatorio");
-            msgLoginLabel.classList.remove("obrigatorio");
-            msgLoginLabel.textContent= "";
-        }
+        if(emailInput.classList.contains("campo-obrigatorio"))            
+            removerObrigatorio(emailInput, descEmailLabel);        
     }
 });
-
 
 // --------------------------------------------------------
 
@@ -47,11 +47,7 @@ proximaButton.addEventListener('click', (e) => {
     const valorEmail= emailInput.value;
 
     if(valorEmail === ""){
-        emailInput.classList.add("campo-obrigatorio");
-        descEmailLabel.classList.add("obrigatorio");
-        descEmailLabel.classList.add("embranco");
-        msgLoginLabel.classList.add("obrigatorio");
-        msgLoginLabel.textContent= "Obrigatório";
+        definirObrigatorio(emailInput, descEmailLabel);       
 
         return;
     }else{
@@ -74,7 +70,12 @@ proximaButton.addEventListener('click', (e) => {
         } 
         
     }
-   
+    
+    const senhaDiv= document.querySelector("#campo-senha");
+    const concluiLoginDiv= document.querySelector("#conclui-login");
+    proximaButton.classList.add("oculto");    
+    senhaDiv.classList.remove("oculto");
+    concluiLoginDiv.classList.remove("oculto");
 });
 
 // --------------------------------------------------------
@@ -87,3 +88,43 @@ tentarNovamButton.addEventListener('click', () => {
 continueYahooButton.addEventListener('click', () => {   
     window.location.replace("https://login.yahoo.com/");
 });
+
+// --------------------------------------------------------
+
+
+senhaInput.addEventListener('focusin', () => {
+    descSenhaLabel.classList.add("descricao-login-menor");
+});
+
+senhaInput.addEventListener('focusout', () => {
+
+    const valorSenha= senhaInput.value;
+
+    if(valorSenha === ""){
+        descSenhaLabel.classList.remove("descricao-login-menor");
+
+    }else{
+        if(senhaInput.classList.constains("campo-obrigatorio"))
+            removerObrigatorio(senhaInput, descSenhaLabel);
+    }
+});
+
+
+// --------------------------------------------------------
+
+function definirObrigatorio(input, label){
+    input.classList.add("campo-obrigatorio");
+    label.classList.add("obrigatorio");
+    label.classList.add("em-branco");
+    msgLoginLabel.classList.add("obrigatorio");
+    msgLoginLabel.textContent= "Obrigatório";    
+}
+            
+function removerObrigatorio(input, label){
+    input.classList.remove("campo-obrigatorio");
+    label.classList.remove("obrigatorio");
+    label.classList.remove("em-branco");
+    msgLoginLabel.classList.remove("obrigatorio");
+    msgLoginLabel.textContent= "";
+}
+
