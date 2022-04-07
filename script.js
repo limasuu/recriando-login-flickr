@@ -13,14 +13,18 @@ const areaPrincipalDiv= document.querySelector("#principal");
 const tentarNovamButton= document.querySelector("#botao-tentar");
 const continueYahooButton= document.querySelector("#botao-continue-yahoo");
 
+let digitou= false;
 
 window.onload= () => {
+    emailInput.focus();
     emailInput.value= "";
     senhaInput.value= "";    
 };
 
 // --------------------------------------------------------
-
+emailInput.addEventListener('keypress', () => {
+    digitou= true;
+});
 
 emailInput.addEventListener('focusin', () => {
     descEmailLabel.classList.add("descricao-login-menor");
@@ -33,6 +37,9 @@ emailInput.addEventListener('focusout', () => {
     if(valorEmail === ""){
         descEmailLabel.classList.remove("descricao-login-menor");
 
+        if(digitou)
+            definirObrigatorio(emailInput, descEmailLabel);  
+    
     }else{        
         if(emailInput.classList.contains("campo-obrigatorio"))            
             removerObrigatorio(emailInput, descEmailLabel);        
@@ -76,6 +83,8 @@ proximaButton.addEventListener('click', (e) => {
     proximaButton.classList.add("oculto");    
     senhaDiv.classList.remove("oculto");
     concluiLoginDiv.classList.remove("oculto");
+    senhaInput.focus();
+    digitou= false;
 });
 
 // --------------------------------------------------------
@@ -91,6 +100,9 @@ continueYahooButton.addEventListener('click', () => {
 
 // --------------------------------------------------------
 
+senhaInput.addEventListener('keypress', () => {
+    digitou= true;
+});
 
 senhaInput.addEventListener('focusin', () => {
     descSenhaLabel.classList.add("descricao-login-menor");
@@ -103,11 +115,14 @@ senhaInput.addEventListener('focusout', () => {
     if(valorSenha === ""){
         descSenhaLabel.classList.remove("descricao-login-menor");
 
+        if(digitou)
+            definirObrigatorio(senhaInput, descSenhaLabel);
     }else{
         if(senhaInput.classList.constains("campo-obrigatorio"))
             removerObrigatorio(senhaInput, descSenhaLabel);
     }
 });
+
 
 
 // --------------------------------------------------------
