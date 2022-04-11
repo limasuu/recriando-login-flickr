@@ -7,7 +7,7 @@
     --azul-padrao: #128fdc;
     --azul-logo: #005fde;
     --rosa-logo: #ff0084;  
-    --vermelho: #ff0000;  
+    --vermelho: #ff0000; 
 }
 
 ::selection{
@@ -293,7 +293,21 @@ main h1{
 .botoes-alerta button:last-child{
     background-color: var(--azul-padrao);
 }
+/* ----------------- */
+#conclui-login{
+    width: 100%;
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 20px;
+    margin: 5px 0 20px 0;
+}
 
+#conclui-login div{
+    text-align: start;
+}
+
+#conclui-login div:hover, #conclui-login div input:hover, #conclui-login div label:hover{
+    cursor: pointer;
+}
 /* ---------------------------------- */
 footer{   
     grid-area: footer;
@@ -324,6 +338,5 @@ select{
     margin: 0 5px;
     color: var(--preto);
 }
-
 
 
