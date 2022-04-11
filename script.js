@@ -13,7 +13,8 @@ const areaPrincipalDiv= document.querySelector("#principal");
 const tentarNovamButton= document.querySelector("#botao-tentar");
 const continueYahooButton= document.querySelector("#botao-continue-yahoo");
 
-let digitou= false;
+let digitouEmail= false;
+let digitouSenha= false;
 
 window.onload= () => {
     emailInput.focus();
@@ -22,8 +23,9 @@ window.onload= () => {
 };
 
 // --------------------------------------------------------
+
 emailInput.addEventListener('keypress', () => {
-    digitou= true;
+    digitouEmail= true;
 });
 
 emailInput.addEventListener('focusin', () => {
@@ -33,11 +35,11 @@ emailInput.addEventListener('focusin', () => {
 emailInput.addEventListener('focusout', () => {
 
     const valorEmail= emailInput.value;
-
+    
     if(valorEmail === ""){
         descEmailLabel.classList.remove("descricao-login-menor");
 
-        if(digitou)
+        if(digitouEmail)
             definirObrigatorio(emailInput, descEmailLabel);  
     
     }else{        
@@ -54,9 +56,9 @@ proximaButton.addEventListener('click', (e) => {
     const valorEmail= emailInput.value;
 
     if(valorEmail === ""){
-        definirObrigatorio(emailInput, descEmailLabel);       
-
+        definirObrigatorio(emailInput, descEmailLabel);
         return;
+
     }else{
 
         var i= valorEmail.indexOf('@');
@@ -74,8 +76,7 @@ proximaButton.addEventListener('click', (e) => {
             areaPrincipalDiv.classList.add("segundo-plano");
 
             return;
-        } 
-        
+        }         
     }
     
     const senhaDiv= document.querySelector("#campo-senha");
@@ -84,7 +85,6 @@ proximaButton.addEventListener('click', (e) => {
     senhaDiv.classList.remove("oculto");
     concluiLoginDiv.classList.remove("oculto");
     senhaInput.focus();
-    digitou= false;
 });
 
 // --------------------------------------------------------
@@ -101,7 +101,7 @@ continueYahooButton.addEventListener('click', () => {
 // --------------------------------------------------------
 
 senhaInput.addEventListener('keypress', () => {
-    digitou= true;
+    digitouSenha= true;
 });
 
 senhaInput.addEventListener('focusin', () => {
@@ -111,14 +111,14 @@ senhaInput.addEventListener('focusin', () => {
 senhaInput.addEventListener('focusout', () => {
 
     const valorSenha= senhaInput.value;
-
+    
     if(valorSenha === ""){
         descSenhaLabel.classList.remove("descricao-login-menor");
 
-        if(digitou)
+        if(digitouSenha)
             definirObrigatorio(senhaInput, descSenhaLabel);
     }else{
-        if(senhaInput.classList.constains("campo-obrigatorio"))
+        if(senhaInput.classList.contains("campo-obrigatorio"))
             removerObrigatorio(senhaInput, descSenhaLabel);
     }
 });
@@ -135,6 +135,7 @@ olharSenhaButton.addEventListener('click', () => {
 
     senhaInput.focus();
 });
+
 
 // --------------------------------------------------------
 
