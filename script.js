@@ -13,8 +13,13 @@ const areaPrincipalDiv= document.querySelector("#principal");
 const tentarNovamButton= document.querySelector("#botao-tentar");
 const continueYahooButton= document.querySelector("#botao-continue-yahoo");
 
+const loginButton= document.querySelector("#botao-login");
+const lembrarEmailCheck= document.querySelector("#lembrar-email");
+
 let digitouEmail= false;
 let digitouSenha= false;
+const EMAIL_TESTE= "email@email.com";
+const SENHA_TESTE= "senha";
 
 window.onload= () => {
     emailInput.focus();
@@ -136,6 +141,22 @@ olharSenhaButton.addEventListener('click', () => {
     senhaInput.focus();
 });
 
+// --------------------------------------------------------
+
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if(senhaInput.value != "" && senhaInput.value != ""){
+        
+        if((emailInput.value === EMAIL_TESTE) && (senhaInput.value === SENHA_TESTE)){
+            alert(`Fazendo login...\nLembrar e-mail? ${lembrarEmailCheck.checked}`);
+            document.location.reload();
+        }else{
+            const loginInvalidoParag= document.querySelector("#login-invalido");
+            loginInvalidoParag.classList.remove("oculto");            
+        }
+    }         
+});
 
 // --------------------------------------------------------
 

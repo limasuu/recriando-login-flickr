@@ -7,7 +7,8 @@
     --azul-padrao: #128fdc;
     --azul-logo: #005fde;
     --rosa-logo: #ff0084;  
-    --vermelho: #ff0000; 
+    --vermelho-padrao: #ff0000; 
+    --vermelho-claro: #ffd8dc; 
 }
 
 ::selection{
@@ -119,6 +120,13 @@ main h1{
     font-size: 1.1rem;
 }
 
+main h1 + p{
+    background-color: var(--vermelho-claro);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
 /* ----------------- */
 .login{
     width: 100%;
@@ -177,11 +185,11 @@ main h1{
 }
 
 .obrigatorio, .campo-obrigatorio:focus ~ .obrigatorio{    
-    color: var(--vermelho);
+    color: var(--vermelho-padrao);
 }
 
 .campo-obrigatorio, .campo-obrigatorio:focus{
-    border-color: var(--vermelho);
+    border-color: var(--vermelho-padrao);
 }
 
 .em-branco{
@@ -226,7 +234,7 @@ main h1{
 }
 
 .campo-obrigatorio + .olhar-senha, .campo-obrigatorio:focus + .olhar-senha{
-    color: var(--vermelho);
+    color: var(--vermelho-padrao);
 }
 /* ----------------- */
 .alerta{
@@ -338,5 +346,4 @@ select{
     margin: 0 5px;
     color: var(--preto);
 }
-
 
