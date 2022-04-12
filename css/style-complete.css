@@ -1,5 +1,14 @@
 @media only screen and (min-width: 576px){   
 
+    .ref-background{
+        display: block;
+        color: var(--cinza-padrao);
+        
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+    }
+
     .principal{
         grid-template-rows: 10% auto 20%;
 
@@ -13,7 +22,7 @@
         width: 350px;
     }
 
-    main{
+    main{        
         align-items: flex-end;
         margin-top: 60px;
     }

@@ -40,6 +40,10 @@
 .container{
     width: 100vw;
 }
+
+.ref-background{
+    display: none;
+}
 /* ----------------- */
 p, a, label{
     font-size: 0.8rem;
