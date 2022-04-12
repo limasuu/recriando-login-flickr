@@ -36,7 +36,28 @@
         color: var(--branco);
     }
 
+    .alerta > div{
+        height: 30vh;
     
+        margin: 35vh 25vw;
+        padding: 20px 15px;
+    }
+
+    .botoes-alerta{
+        justify-content: end
+    }
+
+    .botoes-alerta button{ 
+        width: 28%;
+    }
+
+    .botoes-alerta button:first-child{
+        margin-right: 10px;
+    }
+    
+    .botoes-alerta button:last-child{
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (min-width: 820px){
