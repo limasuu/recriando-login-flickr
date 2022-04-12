@@ -13,6 +13,7 @@
         background-image: url("../img/flickr-background.jpg");
         background-size: cover;
         background-position: center bottom;
+        overflow: scroll;
     }
 
     header{        
@@ -57,15 +58,5 @@
     
     .botoes-alerta button:last-child{
         margin-left: 10px;
-    }
-}
-
-@media only screen and (min-width: 820px){
-    .principal{
-        grid-template-rows: 10% auto 20%;
-    }
-
-    footer .container{        
-        padding: 15px 0;
     }
 }
