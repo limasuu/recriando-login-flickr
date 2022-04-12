@@ -1,0 +1,12 @@
+@media only screen and (min-width: 576px){   
+
+
+    .principal{
+        grid-template-rows: 10% auto 20%;
+
+        background-image: url("../img/flickr-background.jpg");
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+}
