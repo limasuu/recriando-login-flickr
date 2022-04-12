@@ -37,6 +37,9 @@
     grid-template-rows: 11% auto 15%;
 }
 
+.container{
+    width: 100vw;
+}
 /* ----------------- */
 p, a, label{
     font-size: 0.8rem;
@@ -75,6 +78,12 @@ header img{
 /* ---------------------------------- */
 main{
     grid-area: main;
+    
+    display: flex;
+    justify-content: center;
+}
+
+main .container{
     background-color: var(--branco); 
 
     padding: 30px 20px;
@@ -82,7 +91,7 @@ main{
     position: relative;
 }
 
-main, form{
+main .container, form{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -320,6 +329,11 @@ main h1 + p{
 footer{   
     grid-area: footer;
     
+    display: flex;
+    justify-content: center;
+}
+
+footer .container{
     display: flex;
     justify-content: space-between;
     align-items: center;

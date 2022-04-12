@@ -1,12 +1,26 @@
 @media only screen and (min-width: 576px){   
 
-
     .principal{
         grid-template-rows: 10% auto 20%;
 
         background-image: url("../img/flickr-background.jpg");
         background-size: cover;
         background-position: center bottom;
+    }
+
+
+    .container{
+        width: 350px;
+    }
+
+    main{
+        align-items: flex-end;
+        margin-top: 60px;
+    }
+    
+    footer .container{
+        align-items: flex-start;
+        padding: 10px 0;
     }
 
 }
