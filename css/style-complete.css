@@ -15,6 +15,10 @@
         background-position: center bottom;
     }
 
+    header{        
+        padding-left: 10vw;
+    }
+
     .container{
         width: 350px;
     }
@@ -28,6 +32,11 @@
         padding: 10px 0;
     }
 
+    select, .links a{   
+        color: var(--branco);
+    }
+
+    
 }
 
 @media only screen and (min-width: 820px){
