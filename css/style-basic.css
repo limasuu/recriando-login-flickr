@@ -315,18 +315,18 @@ main h1 + p{
     background-color: var(--azul-padrao);
 }
 /* ----------------- */
-#conclui-login{
+.conclui-login{
     width: 100%;
     border-bottom: 1px solid var(--cinza-claro);
     padding-bottom: 20px;
     margin: 5px 0 20px 0;
 }
 
-#conclui-login div{
+.conclui-login div{
     text-align: start;
 }
 
-#conclui-login div:hover, #conclui-login div input:hover, #conclui-login div label:hover{
+.conclui-login div:hover, .conclui-login div input:hover, .conclui-login div label:hover{
     cursor: pointer;
 }
 /* ---------------------------------- */
