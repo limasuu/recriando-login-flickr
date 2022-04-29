@@ -65,23 +65,14 @@ proximaButton.addEventListener('click', (e) => {
         return;
 
     }else{
+        const regex= /^[a-z]\w*@[a-z]+\.[a-z]+$/;
 
-        var i= valorEmail.indexOf('@');
-        var controle= false;
-
-        if(i != -1){
-            var finalEmail= valorEmail.substring(i);
-
-            if(finalEmail.includes('.'))
-                controle= true;            
-        }
-
-        if(!controle){    
+        if(!regex.test(valorEmail)){
             alertaDiv.classList.remove("oculto");
             areaPrincipalDiv.classList.add("segundo-plano");
 
             return;
-        }         
+        }       
     }
     
     const senhaDiv= document.querySelector("#campo-senha");
